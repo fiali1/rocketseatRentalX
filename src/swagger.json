@@ -12,7 +12,7 @@
   "paths": {
     "/categories": {
       "post": {
-        "tags": ["Category"],
+        "tags": ["Categories"],
         "summary": "Create a category",
         "description": "Create a new category",
         "requestBody": {
@@ -46,7 +46,7 @@
         }
       },
       "get": {
-        "tags": ["Category"],
+        "tags": ["Categories"],
         "summary": "List all categories",
         "description": "List all categories",
         "responses": {
@@ -71,6 +71,73 @@
               }
             }
           }
+        }
+      }
+    },
+    "/categories/import": {
+      "post": {
+        "tags": ["Categories"],
+        "summary": "Upload a list of categories",
+        "description": "Upload a list and create categories",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Failed to load file"
+          }
+        }
+      }
+    },
+    "/specifications": {
+      "post": {
+        "tags": ["Specifations"],
+        "summary": "Create a specifation",
+        "description": "Create a new specifation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Specification"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Specification already exists"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Specification": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
         }
       }
     }
