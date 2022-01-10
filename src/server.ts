@@ -17,7 +17,8 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.use(router);
 
-app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.use((error: Error, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof AppError) {
     return res.status(error.statusCode).json({
       message: error.message,
