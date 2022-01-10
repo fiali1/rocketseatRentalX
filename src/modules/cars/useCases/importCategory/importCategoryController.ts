@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
 
+import { AppError } from "../../../../errors/AppError";
 import { ImportCategoryUseCase } from "./ImportCategoryUseCase";
 
 class ImportCategoryController {
@@ -10,7 +11,7 @@ class ImportCategoryController {
     const importCategoryUseCase = container.resolve(ImportCategoryUseCase);
 
     if (!file) {
-      throw new Error("File not found");
+      throw new AppError("File not found");
     }
 
     await importCategoryUseCase.execute(file);
