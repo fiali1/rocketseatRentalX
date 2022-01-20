@@ -1,8 +1,8 @@
-import { inject, injectable } from "tsyringe";
+import { injectable, inject } from "tsyringe";
+import { deleteFile } from "utils/file";
 
-import { AppError } from "../../../../errors/AppError";
-import { deleteFile } from "../../../../utils/file";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
+import { AppError } from "@errors/AppError";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 
 interface IRequest {
   user_id: string;
