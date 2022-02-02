@@ -60,6 +60,6 @@ describe("Authenticate User", () => {
         email: user.email,
         password: "incorrectPassword",
       })
-    ).rejects.toBeInstanceOf(new AppError("Email or password incorrect"));
+    ).rejects.toEqual(new AppError("Email or password incorrect"));
   });
 });

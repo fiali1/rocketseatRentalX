@@ -1,8 +1,8 @@
-import { Entity, PrimaryColumn, Column, CreateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidv4 } from "uuid";
 
-@Entity("specifications")
-class Specification {
+@Entity("car_images")
+class CarImage {
   constructor() {
     if (!this.id) {
       this.id = uuidv4();
@@ -13,13 +13,13 @@ class Specification {
   id: string;
 
   @Column()
-  name: string;
+  car_id: string;
 
   @Column()
-  description: string;
+  image_name: string;
 
   @CreateDateColumn()
   created_at: Date;
 }
 
-export { Specification };
+export { CarImage };

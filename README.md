@@ -4,17 +4,21 @@
 
 Deve ser possível cadastrar um novo carro.
 
-Deve ser possível listar todas as categorias.
-
 **Regras de Negócio**
 
 Não deve ser possível cadastrar um carro com uma placa previamente cadastrada.
 
-Não deve ser possível alterar a placa de um carro cadastrado.
-
 O carro deve ser cadastrado como **disponível** por padrão.
 
 O usuário responsável pelo cadastro deve ser um **usuário administrador**.
+
+# Alteração de carro
+
+**Requisitos Funcionais**
+
+**Regras de Negócio**
+
+Não deve ser possível alterar a placa de um carro cadastrado.
 
 # Listagem de carros
 
@@ -31,7 +35,6 @@ O usuário não precisa estar logado no sistema para visualizar a listagem de ca
 
 # Cadastro de especificações em um carro
 
-
 **Requisitos Funcionais**
 
 Deve ser possível cadastrar uma especificação para um carro.
@@ -46,10 +49,6 @@ Não deve ser possível cadastrar novamente uma especificação já existente pa
 
 Deve ser possível alterar uma especificação para um carro.
 
-Deve ser possível listar todas as especificações para um carro.
-
-Deve ser possível listar todos os carros.
-
 O usuário responsável pelo cadastro deve ser um **usuário administrador**.
 
 # Cadastro de imagens do carro
@@ -57,8 +56,6 @@ O usuário responsável pelo cadastro deve ser um **usuário administrador**.
 **Requisitos Funcionais**
 
 Deve ser possível cadastrar uma imagem para um carro.
-
-Deve ser possível listar todos os carros.
 
 **Requisitos Não Funcionais**
 
@@ -83,5 +80,3 @@ O aluguel deve ter duração mínima de 24 horas.
 Não deve ser possível cadastrar um novo aluguel caso já exista um aluguel aberto para um mesmo usuário.
 
 Não deve ser possível cadastrar um novo aluguel caso já exista um aluguel aberto para um mesmo carro.
-
-
