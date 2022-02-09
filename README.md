@@ -107,8 +107,25 @@ Caso haja multa, deverá ser somada ao total do aluguel.
 
 **Requisitos Funcionais**
 
-Deve ser possível realizar a busca de todos os alugueis para um usuário
+Deve ser possível realizar a busca de todos os alugueis para um usuário.
 
 **Regras de Negócio**
 
-O usuário deve estar logado na aplicação
+O usuário deve estar logado na aplicação.
+
+# Recuperação de senha
+
+**Requisitos Funcionais**
+
+Deve ser possível que o usuário recupere sua senha informando seu email.
+
+O usuário deve receber o email com passo a passoa para recuperação de senha.
+
+O usuário deve conseguir definir uma nova senha.
+
+
+**Regras de Negócio**
+
+O usuário precisa informar uma nova senha.
+
+O link enviado para recuperação deve expirar em 3 horas.
